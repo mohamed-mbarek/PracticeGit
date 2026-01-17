@@ -50,6 +50,7 @@ public class Student {
         System.out.println("Grade updated for " + name + ": " + newGrade);
     }
 
+
     // Method to display student information
     public void displayInfo() {
         System.out.println("Student ID: " + studentId);
