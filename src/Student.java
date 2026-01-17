@@ -4,13 +4,15 @@ public class Student {
     private final int studentId;
     private int age;
     private double grade;
+    private Language language; // Every student learns a language
 
     // Constructor
-    public Student(String name, int studentId, int age, double grade) {
+    public Student(String name, int studentId, int age, double grade, Language language) {
         this.name = name;
         this.studentId = studentId;
         this.age = age;
         this.grade = grade;
+        this.language = language;
     }
 
     // Getters
@@ -28,6 +30,10 @@ public class Student {
 
     public double getGrade() {
         return grade;
+    }
+
+    public Language getLanguage() {
+        return language;
     }
 
     // Setters
@@ -51,6 +57,9 @@ public class Student {
         System.out.println("Age: " + age);
         System.out.println("Grade: " + grade);
         System.out.println("Status: " + getStatus());
+        System.out.println("--- Learning Language ---");
+        language.displayLanguageInfo();
+        System.out.println("Proficiency: " + language.getProficiency());
     }
 
     // Method to determine pass/fail status
