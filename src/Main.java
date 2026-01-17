@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        // Create a school
+        School school = new School("International Language Academy", "123 Education Street, Learning City");
+
         // Create language objects
         Language french = new Language("French", "Intermediate", 150);
         Language spanish = new Language("Spanish", "Advanced", 320);
@@ -16,26 +19,18 @@ public class Main {
         Student student5 = new Student("Ethan Hunt", 105, 20, 88.5, mandarin);
         Student student6 = new Student("Fiona Green", 106, 23, 91.0, italian);
 
-        // Display student information
-        System.out.println("=== Student Management System ===\n");
+        // Enroll students in the school
+        System.out.println("=== Enrolling Students ===");
+        school.addStudent(student1);
+        school.addStudent(student2);
+        school.addStudent(student3);
+        school.addStudent(student4);
+        school.addStudent(student5);
+        school.addStudent(student6);
 
-        student1.displayInfo();
-        System.out.println();
-
-        student2.displayInfo();
-        System.out.println();
-
-        student3.displayInfo();
-        System.out.println();
-
-        student4.displayInfo();
-        System.out.println();
-
-        student5.displayInfo();
-        System.out.println();
-
-        student6.displayInfo();
-        System.out.println();
+        // Display all students in the school
+        System.out.println("\n=== Student Management System ===\n");
+        school.displayAllStudents();
 
         // Update grades
         System.out.println("=== Updating Grades ===");
@@ -60,5 +55,16 @@ public class Main {
         student5.displayInfo();
         System.out.println();
         student6.displayInfo();
+
+        // Display school statistics
+        System.out.println("\n");
+        school.displayStatistics();
+
+        // Demonstrate finding a student
+        System.out.println("\n=== Finding Student by ID ===");
+        Student foundStudent = school.findStudentById(103);
+        if (foundStudent != null) {
+            System.out.println("Found: " + foundStudent.getName());
+        }
     }
 }
