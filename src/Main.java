@@ -13,7 +13,7 @@ public class Main {
 
         // Create student objects - every student learns a language
         Student student1 = new Student("Alice Johnson", 101, 20, 85.5, french);
-        Student student2 = new Student("Bob Smith", 102, 21, 92.0, spanish);
+        Student student2 = new Student("Amine Mbarek", 102, 21, 92.0, spanish);
         Student student3 = new Student("Charlie Brown", 103, 19, 78.5, japanese);
         Student student4 = new Student("Diana Prince", 104, 22, 95.0, german);
         Student student5 = new Student("Ethan Hunt", 105, 20, 88.5, mandarin);
