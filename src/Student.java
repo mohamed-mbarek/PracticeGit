@@ -1,0 +1,64 @@
+public class Student {
+    // Attributes
+    private String name;
+    private final int studentId;
+    private int age;
+    private double grade;
+
+    // Constructor
+    public Student(String name, int studentId, int age, double grade) {
+        this.name = name;
+        this.studentId = studentId;
+        this.age = age;
+        this.grade = grade;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void updateGrade(double newGrade) {
+        this.grade = newGrade;
+        System.out.println("Grade updated for " + name + ": " + newGrade);
+    }
+
+    // Method to display student information
+    public void displayInfo() {
+        System.out.println("Student ID: " + studentId);
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
+        System.out.println("Status: " + getStatus());
+    }
+
+    // Method to determine pass/fail status
+    public String getStatus() {
+        if (grade >= 60) {
+            return "PASS";
+        } else {
+            return "FAIL";
+        }
+    }
+}
